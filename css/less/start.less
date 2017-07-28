@@ -1,0 +1,188 @@
+/* whole document based styles started  */
+
+body, html{
+	height: 100%;
+	height: 100%;
+
+}
+body{
+    -webkit-font-smoothing: antialiased;   
+
+}
+/* links styles */
+
+    a:link {
+        color: @white;
+        text-decoration: underline;
+    }
+    a:visited {
+        color: darken(@white, 5%);   
+    }
+    a:hover, a:active{
+        text-decoration: none;
+        color: darken(@white, 15%);
+    }
+
+
+/* section styles  */
+
+
+section{
+    position: relative;
+     .background-alpha(@primary, 0.5);
+    padding: 25px 0px;
+    z-index: 4;
+
+}
+
+/* styles for selected text in the theme */
+
+::selection {
+	background: @text-selection-bg;
+	}
+::-moz-selection {
+	background: @text-selection-bg;
+}
+
+/* container styles */
+
+.container{
+    position: relative;
+    color: @white;
+    margin: 0px auto;   
+}
+
+/* section content styles: section content is wrapper element inside container of the section */
+
+ .section-content{
+    position: relative;
+    display: block;
+    // .background-alpha(@black, 0.08);
+    // .border-radius(8px);
+    // border: 4px solid rgba(0,0,0, 0.1);
+    
+    padding: 15px;
+ }
+ /* 
+ *      heading styles: heading is the class used for headings in the theme
+ */
+ 
+ .heading{
+     
+     font-weight: normal;
+    font-size: @heading-desktop-font-size;
+    letter-spacing: 1.2px;
+    // text-rendering: optimizeLegibility;
+    .nexaFontBold();
+     -webkit-transform: translateZ(0);
+     @media(max-width: @screen-md-max ) {
+        font-size: @heading-desktop-font-size;
+     }  
+     @media (max-width: @screen-sm-max ) {
+        font-size: @heading-tablet-font-size
+     }
+    @media (max-width: @screen-xs-max) {
+        font-size: @heading-mobile-font-size
+     }
+   
+    
+}
+
+/* tagline styles */
+
+.tagline{
+    font-size: @tagline-font-size;
+    font-weight: 500;
+    padding-top: 10px;
+    letter-spacing: 1.97px;
+    //  text-rendering: optimizeLegibility;
+     color: @white;
+     
+     // mobile 
+     @media(max-width: @screen-xs-max) {
+           font-size: @tagline-font-size - 2;
+     }
+}
+
+/* 
+*   .btn-glasss styles
+*/
+
+.btn-glass{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    .border-radius(0px);
+    .transition(all 600ms);
+    // .box-shadow(~"0px 2px 1px rgba(256, 256, 256, 0.33)");
+    &:hover{
+        background-color: white;
+        color: normal;
+    }
+    &:active{ 
+    outline: none;
+  }
+  
+  &:focus{
+        background-color: white;
+        color: normal;
+        outline: none;
+  }
+  
+} 
+
+/* background slider styles started */
+.bgs-slider{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('../images/bgslider/4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+/* background pattern styles */
+.pattern-bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.png') repeat center center fixed;
+    z-index: 0;
+    
+}
+
+/* classes .visible and .invisible styles */
+
+.visible{
+    opacity: 1;   
+}
+.invisible{
+    opacity: 0;   
+}
+
+/* display elements inline. */
+.inline{
+    display: inline;   
+}
+
+
+
+/* scroll-up styles: backtotop plugin */
+
+#scrollUp{
+    display: block;
+    top: 100%;
+    // width: 20px;
+    // height: 20px;
+    // margin-left: -50px;
+    //left: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: -52px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    right: 0px;
+    margin-right: 10px;
+}
+
+/* whole document styles ended */

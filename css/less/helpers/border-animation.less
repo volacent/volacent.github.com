@@ -1,0 +1,36 @@
+/*
+* CSS3 Border Animation 
+* AUTHOR: EJAZ KARIM (fb: ejita.karim)
+*/
+@color: #000; // black
+.alpha-border(@color, @alpha : 1){
+    border-color: rgba(red(@color), green(@color), blue(@color), @alpha);    
+}
+@-webkit-keyframes border-animation {
+  0%   { .alpha-border(@color, 0.1) }
+  25%  { .alpha-border(@color, 0.22) }
+  50%  { .alpha-border(@color, 0.35) }
+  75%  { .alpha-border(@color, 0.23) }
+  100% { .alpha-border(@color, 0.12) }
+}
+@-moz-keyframes border-animation {
+  0%   { .alpha-border(@color, 0.1) }
+  25%  { .alpha-border(@color, 0.22) }
+  50%  { .alpha-border(@color, 0.35) }
+  75%  { .alpha-border(@color, 0.23) }
+  100% { .alpha-border(@color, 0.12) }
+}
+@-o-keyframes border-animation {
+  0%   { .alpha-border(@color, 0.1) }
+  25%  { .alpha-border(@color, 0.22) }
+  50%  { .alpha-border(@color, 0.35) }
+  75%  { .alpha-border(@color, 0.23) }
+  100% { .alpha-border(@color, 0.12) }
+}
+@keyframes border-animation {
+  0%   { .alpha-border(@color, 0.1) }
+  25%  { .alpha-border(@color, 0.22) }
+  50%  { .alpha-border(@color, 0.35) }
+  75%  { .alpha-border(@color, 0.23) }
+  100% { .alpha-border(@color, 0.12) }
+}

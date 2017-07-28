@@ -1,0 +1,106 @@
+.border-radius(@border-size) {
+    border-radius: @border-size;   
+    -webkit-border-radius: @border-size;
+    -moz-border-radius: @border-size;
+    -ms-border-radius: @border-size;
+    -o-border-radius: @border-size;
+}
+// transition mixin: overridden with bootstrap default one.
+.transition(@transition) {
+  -webkit-transition: @transition;
+        -o-transition: @transition;
+    -moz-transition: @transition;
+     -ms-transition: @transition;
+          transition: @transition;
+}
+// Convert hex to rgba color
+
+.toRGBA(@property; @color;  @alpha) {
+    @red : red(@color);
+    @green : green(@color);
+    @blue : blue(@color);
+    @property :  rgba(@red, @green, @blue, @alpha);
+}
+
+// transform
+
+.scale(@v1,@v2) {
+    	transform: scale(@v1, @v2);
+    	-webkit-transform: scale(@v1, @v2);
+    	-moz-transform: scale(@v1, @v2);
+    	-o-transform: scale(@v1, @v2);
+    	-ms-transform: scale(@v1, @v2);    
+}
+// rotate
+
+.rotate(@deg) {
+    	transform: rotate(@deg);
+    	-webkit-transform: rotate(@deg);
+    	-moz-transform: rotate(@deg);
+    	-o-transform: rotate(@deg);
+    	-ms-transform: rotate(@deg);
+}
+
+//text shadow
+
+.text-shadow(@values) {
+    text-shadow: @values;
+    -webkit-text-shadow: @values;
+    -moz-text-shadow: @values;
+    -ms-text-shadow: @values;
+    -o-text-shadow: @values;
+    
+    
+}
+
+// simple company button mixin.
+// background colors, forground colors and border color will be calcualted from the provided color
+.company-btn(@color) {
+    @btnClr : @color; // btn-learn-more
+    @btnLight:    hsl(hue(@btnClr), 100%, 70%);
+    @btnDark:     hsl(hue(@btnClr), 60%, 40%);
+    @btnFaded:    hsl(hue(@btnClr), 60%, 65%);
+    
+    .box-shadow(none);
+    color: @white !important;
+    font-weight: bold;
+    background-color: @btnDark;
+    border: 3px solid @btnClr;
+    outline: none !important;
+    .transition(all 400ms ease);
+    &:hover{
+        background-color: darken(@btnClr, 5%);
+         color: @white;
+    }
+    &:active{
+        border-color: darken(@btnClr, 10%);
+         color: @white;
+        .box-shadow(none);
+    }
+    
+    .fa{
+        padding-right: 4px;    
+    }
+}
+
+.background-alpha(@bgColor, @alpha) {
+    background-color: rgba(red(@bgColor), green(@bgColor), blue(@bgColor), @alpha);    
+}
+
+// google font's maxins
+.nexaFontBold(){
+    font-family: 'nexa_boldregular', Arial, sans-serif;
+}
+
+
+
+// animation delay
+
+.animate-delay(@time : 2s) {
+    animation-delay: @time;
+    -webkit-animation-delay: @time;
+    -moz-animation-delay: @time;
+    -o-animation-delay: @time;
+    -ms-animation-delay: @time;
+}
+

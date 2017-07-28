@@ -1,0 +1,74 @@
+/* features styles started */
+
+#features{
+    position: relative;
+  
+  
+        .container{
+            position: relative;
+            .section-content{
+                // head section contains heading + paragraph text. Tagline
+              
+                    .section-title{
+                        /* overrite heading class styles here - Note: All the styles for heading comes from .heading global class */
+                        margin-bottom: 10px;
+                        .heading{
+                            position: relative;        
+                        }   
+                        .tagline {
+                            position: relative;
+                        }
+                    }    
+                   
+                        .features{
+                            position: relative;
+                            color: @black;
+                            margin-top: 15px;
+                            .feature{
+                               color: @white; 
+                                padding: 5px;
+                                margin-top: 10px;
+                                .caption{
+                                    .background-alpha(@black, 0.4);   
+                                     padding: 10px;
+                                     .border-radius(8px);
+                                     margin-top: 10px;
+                                     .caption-heading{
+                                        padding: 0px;
+                                        margin: 0px;
+                                        margin: 7px 0px;
+                                        letter-spacing: 1.3px;
+                                        font-size: 28px;
+                                        
+                                        // change font size on tablet
+                                        @media(max-width: @screen-sm-max) {
+                                            font-size: 25px;   
+                                        }
+                                        // change font size on mobile screens
+                                        @media(max-width: @screen-xs-max) {
+                                            font-size: 20px;   
+                                        }
+                                        
+                                     }
+                                     .tagline {
+                                        line-height: 150%;
+                                        word-spacing: 1.5px;
+                                        letter-spacing: 2px;
+                                        font-weight: normal;
+                                     }
+                                }
+                               .fa {
+                                   border: 2px solid white;
+                                   padding: 30px;
+                                   border-radius: 50%;
+                                    display: inline-block;
+                                    margin-bottom: 12px;
+                               }
+                            }
+                    }
+                }
+            }
+           
+        }
+    
+/* features section styles ended */

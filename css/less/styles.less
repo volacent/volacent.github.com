@@ -1,0 +1,70 @@
+/*
+*   Theme Name: Appion
+*   Theme Developer: Ejaz Karim Hunzai (ejazkarimhunzai@gmail.com, facebook.com/ejita.karim)
+*   Version: 1.0
+*/
+
+
+// colors used in the theme.
+@black : #000000;
+@white : #ffffff;
+// primary color of the theme
+@primary: @black; 
+
+//--------------------------- IMPORTS --------------------------------------------------//
+
+
+@import "bootstrapless/mixins.less";
+@import "bootstrapless/required-variables.less";
+// import my-mixins
+@import "my-mixins.less";
+
+
+
+
+// import start.ess
+@import "start.less";
+
+
+
+// import sections 
+@import "sections/nav.less";
+@import "sections/header.less";
+@import "sections/features.less";
+@import "sections/benefit.less";
+@import "sections/testimonials.less";
+@import "sections/story.less";
+@import "sections/contact.less";
+
+
+// section imports end //
+
+
+//------------------------ SOME VARAIBLES --------------------------//
+
+
+
+// these are variables used int the styles.
+// 
+//   .heading class is used extensively in the theme. Each section has a heading and styles for
+//   those heading are defined in this class (.heading) 
+//   variables: heading-desktop-font-size:50px
+//              heading-tablet-font-size: 38px;
+//              heading-mobile-font-size: 26px;
+//
+
+@heading-desktop-font-size: 50px;
+@heading-tablet-font-size: 38px;
+@heading-mobile-font-size: 26px;
+
+// text selection background color 
+// variable @text-selection-bg : rgba(0,0,0,0.6)
+
+@text-selection-bg: rgba(0,0,0,0.6);
+ 
+//*   Tagline: Tagline is used in every section after heading.
+//*   variable : @tagline-font-size: 16px;
+//*
+
+@tagline-font-size: 16px;
+

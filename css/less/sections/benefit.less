@@ -1,0 +1,123 @@
+/* BENEFIT STYLES STARTED */
+#benefit{
+    position: relative;
+  
+        .section-content{
+          
+            .iphone{
+                // No need any styles
+                position: relative;
+                // margin: 0px auto;
+                margin-top: 5px;
+                margin-bottom: 8px;
+                // display: inline-block;
+                
+                img{
+                    width: 100%; /* firefox reponsive image bug overcome */ 
+                    .scale(0.9, 0.9);  
+
+
+                    @media( max-width: @screen-sm-max) {
+                        .scale(1, 1);
+
+                    }
+                    @media( max-width: @screen-xs-max) {
+                        width: 50%;
+                        margin: 0px auto;
+
+
+                    }
+               
+                }
+            }
+            
+             .title {
+                    position: relative;
+                    padding: 20px 0px;
+                    .heading{
+                            // overrite styles here for .heading class
+                    }
+                }
+                
+            .the-benefit{
+                position: relative;
+                margin: 8px 0px;
+                margin-top: 23%;
+                
+                @media( max-width: @screen-sm-max) {
+                    margin-top: 8%;
+                }
+                @media( max-width: @screen-xs-max) {
+                    margin-top: 5%;
+                    
+                }
+               
+                .benefit-detail {
+                    position: relative;
+                    margin-top: 130px;
+                    margin-bottom: 15px;
+                   
+                       @media( max-width: @screen-sm-max ) {
+                         margin-top: 13px; 
+                       }
+                   .fa-ul {
+                       position: relative;
+                       margin-top: 20px;
+                       margin-bottom: 20px;
+                       letter-spacing: 1.8px;
+                        li {
+                            font-size: 25px;   
+                            margin-left: 20px;
+                            margin: 45px 0px;
+
+                            @media(max-width: @screen-sm-max) {
+                                margin: 10px 0px;
+                            }
+                            .benefit-description{
+                                font-size: 17px;
+                                color: darken(@white, 10%);
+                                font-weight: normal;
+                                line-height: normal;
+                                letter-spacing: 1.2px;;
+                                line-height: 150%;
+
+                                @media(max-width: @screen-sm-max) {
+                                    font-size: 13px;   
+                                }
+                                @media(max-width: @screen-xs-max) {
+                                    font-size: 16px;   
+                                }
+
+                            }
+                            // scale down font size on tablets and mobiles
+                            @media(max-width: @screen-sm-max) {
+                                font-size: 16px;   
+                            }
+                            @media(max-width: @screen-xs-max) {
+                                font-size: 20px;   
+                            }
+                            .fa-li{
+                                padding-right: 50px;   
+                            }
+                        }
+                   }
+                }
+                .benefits{
+                    li{
+                     padding-top:2px;   
+                     list-style-type: none;
+                        font-size: 22px;
+                     .benefit-text{
+                        // font-weight: bold;
+                        font-size: 19px;
+                        padding: 1px 0px;
+                     }
+                    }
+                }
+            }
+            
+       
+        }
+    }
+
+/* BENEFIT STYLES ENDED */

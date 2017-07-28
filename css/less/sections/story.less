@@ -1,0 +1,114 @@
+/* STORY STYLES STARTED */
+
+#story{
+    position: relative;
+    
+    .container{
+        .section-content{
+         padding-bottom: 80px;
+        .section-title{
+            // styles for these elements pulled from global classes `heading` and `tagline`
+            // we've provided these here so that you easily styles.
+            .heading{}
+            .tagline{}
+        }
+        
+        
+        // team member styles 
+            
+         .team-members{
+             position: relative;
+             margin: 50px 0px;
+             // padding: 30px 0px;
+             
+            .member-img{
+                position: relative;
+                
+                img{
+                    width: 100%;   //overcome firefox responsive image bug
+                    // .scale(0.9, 0.9);
+                    // border: 1px solid white;
+                    padding: 20px;
+                    .border-radius(50%);
+                }
+            }
+            
+         
+            .member-details{
+                padding: 20px;
+                .background-alpha(@black, 0.4);
+                margin-top: 100px;
+                position: relative;
+                -webkit-font-smoothing: subpixel-antialiased;
+                
+                @media(max-width: @screen-xs-max) {
+                    margin-top: 20px;
+                }
+                .member-name{
+                    padding: 0px;
+                    margin: 0px;
+                    margin: 4px 0px;
+                    text-transform: capitalize;
+                    font-size: 22px;
+                    letter-spacing: 1.5px;
+                    
+                }
+                .member-role{
+                    margin: 0px;
+                    padding: 0px;
+                    margin: 5px 0px;
+                    letter-spacing: 1.9px;
+                    font-size: 14px;
+                }
+                
+                .member-bio {
+                    margin: 0px;
+                    padding: 0px;
+                    margin: 8px 0px 4px;
+                    padding-bottom: 10px;
+                    line-height: 160%;
+                }
+                .social-links{
+                    a{
+                        color: @white;
+                        padding: 3px;
+                        margin-left: 2px;
+                      
+                    }
+                }
+                
+                // arrow
+                &:after{
+                    content: '';
+                    display: block;
+                    border: 30px solid black;
+                    border-color:  rgba(0,0,0,0.4)  rgba(0,0,0,0.4) transparent transparent;
+                    position: absolute;
+                    top: 10%;
+                    left: -60px;
+                    @media(max-width: @screen-xs-max) {
+                        left: 50%;
+                        margin-left: -30px;
+                        border-color:  transparent transparent rgba(0,0,0,0.4) transparent;
+                        top: -60px;
+                    }
+                }
+            }
+            .right {
+                &:after{
+                    left: 100%;
+                     border-color:  rgba(0,0,0,0.4) transparent transparent  rgba(0,0,0,0.4) ;
+                     @media(max-width: 767px) {
+                        left: 50%;
+                        margin-left: -30px;
+                        border-color:  transparent transparent rgba(0,0,0,0.4) transparent;
+                        top: -60px;
+                    }
+                }
+            }
+         }  
+        }
+    }
+}
+
+/* STORY STYLES ENDED */
